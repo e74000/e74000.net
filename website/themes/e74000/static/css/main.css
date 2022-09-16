@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url("{{ "fonts/JetBrainsMono-Light.woff2" | absURL }}") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Serif';
+    src: url("{{ "fonts/IBMPlexSerif-Regular.woff2" | absURL }}") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url("{{ "fonts/IBMPlexSans-Regular.woff2" | absURL }}") format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#content {
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#titleBox {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    background-color: black;
+    color: white;
+
+    box-shadow: -10px -10px #e74000;
+    text-decoration: none;
+
+    font-family: "IBM Plex Serif";
+}
+
+#stuffBox {
+    width: auto;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+
+    font-family: "JetBrains Mono";
+    color: black;
+}
+
+div#stuffBox > a {
+    color: midnightblue;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+div#stuffBox > a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+div#stuffBox > a:active {
+    color: #e74000;
+    text-decoration: underline;
+}
+
+a.logo {
+    display: flex;
+    width: min-content;
+
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+
+    box-shadow: -10px -10px #e74000;
+    text-decoration: none;
+
+    font-family: "IBM Plex Serif";
+}
+
+a.logo > h1 {
+    font-family: "IBM Plex Serif";
+    text-decoration: none;
+    color: white;
+    font-size: 27px;
+}
+
+div.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1.title {
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    width: 100%;
+    color: black;
+
+    font-family: "JetBrains Mono";
+}
+
+h1.desc {
+    margin-left: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    width: 100%;
+    color: darkgray;
+
+    text-align: right;
+
+    font-family: "JetBrains Mono";
+}
+
+div.content {
+    margin: 20px;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+
+    font-family: "IBM Plex Sans";
+}
+
+html, body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+    width: 100vw;
+}

@@ -1,5 +1,3 @@
 +++
-title = "Test"
+title = "e74000"
 +++
-
-Test page. _italic_, __bold__, ___both___

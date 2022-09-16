@@ -1,4 +1,5 @@
 baseurl = "https://e74000.net/"
 languageCode = "en-gb"
-theme = "bare"
-title = "e74000.net"
+theme = "e74000"
+title = "e74000"
+
