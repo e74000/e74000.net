@@ -1,23 +1,8 @@
-@font-face {
-    font-family: 'JetBrains Mono';
-    src: url("{{ "fonts/JetBrainsMono-Light.woff2" | absURL }}") format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=IBM+Plex+Serif&family=JetBrains+Mono&display=swap');
 
-@font-face {
-    font-family: 'IBM Plex Serif';
-    src: url("{{ "fonts/IBMPlexSerif-Regular.woff2" | absURL }}") format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'IBM Plex Sans';
-    src: url("{{ "fonts/IBMPlexSans-Regular.woff2" | absURL }}") format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'IBM Plex Serif', serif;
+font-family: 'JetBrains Mono', monospace;
 
 #content {
     width: 100%;
