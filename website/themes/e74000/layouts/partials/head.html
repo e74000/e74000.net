@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
 <head>
-    <title>{{ .Site.Title }}</title>
-
     <link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
     <link rel="icon" type="images/x-icon" href="{{ "imgs/favicon.ico" | absURL }}" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }}</title>
 </head>
 </html>
