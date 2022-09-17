@@ -168,8 +168,6 @@ html, body {
 }
 
 pre {
-    border-radius: 10px;
-    padding: 20px;
 }
 
 code.has-jax {
@@ -185,6 +183,7 @@ div.program {
     padding: 0;
 
     border-radius: 10px;
+    -webkit-border-radius: 10px;
     overflow: hidden;
 
     background-color: #272822;
@@ -213,7 +212,7 @@ div.program {
 }
 
 .optionSlider {
-    width: 85%;
+    width: 100%;
 }
 
 .optionNumber {
