@@ -1,5 +1,7 @@
 <div class="program">
-    <iframe scrolling="no" src="{{ printf "%s%s%s" ("wasm/wasm.html" | absURL) "?" .ProgramName }}"></iframe><br>
+    <iframe scrolling="no" src="{{ printf "%s%s%s" ("wasm/wasm.html" | absURL) "?" .Params.ProgramName }}"></iframe><br>
+
+    <p> {{ .Params.ProgramName }} </p>
 
     <div id="options"></div>
 </div>

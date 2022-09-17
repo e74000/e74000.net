@@ -11,7 +11,7 @@
     {{ .Params.ProgramName }}
 
     {{ if .Params.Program }}
-        {{ partial "program.html" .Params }}
+        {{ partial "program.html" . }}
     {{ end }}
 
     {{ .Content }}
