@@ -1,16 +1,18 @@
 {{ define "main" }}
 <body>
 <div class="topBar">
-    <a class="logo" href="/">
+    <a class="logo" title="Home" href="..">
         <h1>e74000</h1>
     </a>
 
-    <h1 class = title> {{ .Title }} </h1><h1 class="desc">{{ .Description }}</h1>
+    <h1 class = "title"> {{ .Title }} </h1><h1 class="desc">{{ .Description }}</h1>
 </div>
-<hr>
-<div class="content">
+<div class="pageContent">
+    {{ if .Params.Program }}
+        {{ partial "program.html" .Params }}
+    {{ end }}
+
     {{ .Content }}
 </div>
-
 </body>
 {{ end }}

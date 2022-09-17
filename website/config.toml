@@ -3,3 +3,5 @@ languageCode = "en-gb"
 theme = "e74000"
 title = "e74000"
 
+[markup.goldmark.renderer]
+    unsafe= true

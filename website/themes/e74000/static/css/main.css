@@ -5,7 +5,8 @@ font-family: 'IBM Plex Serif', serif;
 font-family: 'JetBrains Mono', monospace;
 
 #content {
-    width: 100%;
+    width: 100vw;
+    background-color: yellowgreen;
 }
 
 #container {
@@ -13,8 +14,8 @@ font-family: 'JetBrains Mono', monospace;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 #titleBox {
@@ -57,6 +58,21 @@ div#stuffBox > a:active {
     text-decoration: underline;
 }
 
+a {
+    color: midnightblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #e74000;
+    text-decoration: underline;
+}
+
 a.logo {
     display: flex;
     width: min-content;
@@ -83,19 +99,26 @@ a.logo > h1 {
 div.topBar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+
+    width: 100vw;
 }
 
 h1.title {
     margin-left: 0px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-right: 20px;
+    margin-right: 0px;
 
-    width: 100%;
+    padding: 0;
+
+    width: available;
     color: black;
 
+    font-size: 18px;
+
     font-family: "JetBrains Mono";
+    font-weight: bolder;
 }
 
 h1.desc {
@@ -104,21 +127,35 @@ h1.desc {
     margin-bottom: 20px;
     margin-right: 20px;
 
+    padding: 0;
+
     width: 100%;
     color: darkgray;
 
     text-align: right;
 
     font-family: "JetBrains Mono";
+    font-size: 16px;
+
+    overflow: clip;
 }
 
-div.content {
-    margin: 20px;
+div.pageContent {
     padding: 20px;
     background-color: lightgray;
     border-radius: 10px;
 
     font-family: "IBM Plex Sans";
+
+    align-self: center;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: available;
+    max-width: 1000px;
 }
 
 html, body {
@@ -128,4 +165,67 @@ html, body {
 
     height: 100vh;
     width: 100vw;
+}
+
+pre {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+
+div.program {
+    width: 100%;
+    padding: 0;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background-color: #272822;
+    color: lightgray;
+
+    padding-bottom: 5px;
+
+    display: flex;
+
+    flex-flow: wrap;
+}
+
+#options {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 2.5px;
+    width: 100%;
+    font-family: "JetBrains Mono";
+    display: block;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.optionSlider {
+    width: 85%;
+}
+
+.optionNumber {
+    width: 10%;
+}
+
+iframe {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+    width: 100%;
+    aspect-ratio: 2;
 }
