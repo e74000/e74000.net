@@ -13,9 +13,13 @@ I'm currently studying physics, CS and maths.
 I put this website together to showcase my various projects and other things. You can see them on [GitHub](https://github.com/e74000/) too.
 
 The things I'll generally post about here are: 
+
 * Physics simulations
+ 
 * Complex systems
+
 * General programming shenanigans
+ 
 * A bit of AI.
 
 

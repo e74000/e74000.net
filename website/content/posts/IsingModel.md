@@ -32,11 +32,11 @@ location on the lattice and then work out
 the probability of that cell changing state
 using the following equation:
 
-`$G_{n} = G_{i+1,j} + G{i-1,j} + G{i,j+1} + G{i,j-1}$`
+`$G_{n} = G_{i+1,j} + G_{i-1,j} + G_{i,j+1} + G_{i,j-1}$`
 
 `$p = e^{-2 \beta (G_{i,j} + G_{n})}$`
 
-Where `$G_i,j$` is the spin in a cell at `$(i, j)$`
+Where `$G_{i,j}$` is the spin in a cell at `$(i, j)$`
 on the lattice, `$G_{n}$` is the sum of the spins
 of all neighboring cells, and `$\beta$` is the
 reciprocal of the temperature.
