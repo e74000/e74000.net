@@ -1,7 +1,7 @@
 ---
 title: "The Ising Model"
 description: "[physics/CA]"
-date: "2022-09-07"
+date: "1970-01-01"
 program: true
 programName: "ising.wasm"
 ---
