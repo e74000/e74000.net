@@ -4,6 +4,7 @@ description: "[physics/CA]"
 date: "1970-01-01"
 program: true
 programName: "ising.wasm"
+thumbnail: "ising.png"
 ---
 
 # The Ising Model

@@ -15,11 +15,16 @@
     </article>
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
-        <a href="{{ .Permalink }}">
+        <a href="{{ .Permalink }}" class="page">
             <div class="pageContent">
-                <h1> {{ .Title }} </h1>
-                <h4> {{ .Description }} </h4>
+                <span class="titleDesc">
+                    <h1> {{ .Title }} </h1>
+                    <h4> {{ .Description }} </h4>
+                </span>
+                <span class="image" style="background-image: url('/images/{{ .Params.Thumbnail }}');">
+                </span>
             </div>
+
         </a>
     {{ end }}
 </main>

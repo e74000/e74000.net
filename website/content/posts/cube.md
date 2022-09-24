@@ -1,9 +1,10 @@
 ---
 title: "nD Rotations"
 description: "[maths]"
-date: "1970-01-01"
+date: "1970-01-04"
 program: true
 programName: "cube.wasm"
+thumbnail: "cube.png"
 ---
 
 # Rotating Shapes in N Dimensions

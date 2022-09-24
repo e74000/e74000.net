@@ -1,9 +1,10 @@
 ---
 title: "Wave Equation Simulation"
 description: "[physics/CA]"
-date: "1970-01-01"
+date: "1970-01-03"
 program: true
 programName: "wave.wasm"
+thumbnail: "wave.png"
 ---
 
 # Wave Equation simulation
