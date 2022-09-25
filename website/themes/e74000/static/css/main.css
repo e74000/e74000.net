@@ -147,6 +147,29 @@ a.page:hover {
 div.pageContent {
     color: black;
     text-decoration: none;
+
+    padding: 0px;
+    background-color: lightgray;
+    border-radius: 10px;
+
+    font-family: "IBM Plex Sans";
+
+    align-self: center;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: auto;
+    width: 95%;
+
+    display: table;
+}
+
+div.postContent {
+    color: black;
+    text-decoration: none;
     transition: transform .2s;
 
     padding: 0px;
@@ -168,11 +191,11 @@ div.pageContent {
     display: table;
 }
 
-div.pageContent:hover {
+div.postContent:hover {
     transform: scale(1.01);
 }
 
-.pageContent > span {
+.postContent > span {
     display: table-cell;
 }
 
@@ -202,6 +225,9 @@ html, body {
 }
 
 pre {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 code.has-jax {
