@@ -26,9 +26,7 @@ The temperature is functionally identical to that of the Ising model.
 
 The rules are fairly simple:
 
-`$G_{n,t} = \sin(G_{i,j,t}-G_{i-1,j,t}\;) + \sin(G_{i,j,t}-G_{i+1,j,t}\;) + \sin(G_{i,j,t}-G_{i,j-1,t}\;) + \sin(G_{i,j,t}-G_{i,j+1,t}\;)$`
-
-`$G_{i,j,t+1} = I G_{n,t} + Tr + x \sin(G_{i,j,t})$`
+`$$G_{n,t} = \sin(G_{i,j,t}-G_{i-1,j,t}\;) + \sin(G_{i,j,t}-G_{i+1,j,t}\;) + \sin(G_{i,j,t}-G_{i,j-1,t}\;) + \sin(G_{i,j,t}-G_{i,j+1,t}\;) \\ G_{i,j,t+1} = I G_{n,t} + Tr + x \sin(G_{i,j,t})$$`
 
 Where `$G_{i,j,t}\;$` is the spin of a point `$(i,j)$` on the lattice at time `$t$`, `$I$` is the interaction strength,
 `$T$` is the temperature, `$r$` is a random number in the range `$-1 \le r \le 1$` and `$x$` is the strength of the

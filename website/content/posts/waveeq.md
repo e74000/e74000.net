@@ -21,6 +21,6 @@ precise.
 
 The update method uses the following equation:
 
-`$G_{i,j,t+1} = 2 G_{i,j,t} - G_{i,j,t-1} + C(G_{i-1,j,t} + G_{i+1,j,t} + G_{i,j-1,t} + G_{i,j+1,t} - 4 G_{i,j,t})$`
+`$$G_{i,j,t+1} = 2 G_{i,j,t} - G_{i,j,t-1} + C(G_{i-1,j,t} + G_{i+1,j,t} + G_{i,j-1,t} + G_{i,j+1,t} - 4 G_{i,j,t})$$`
 
 Where `$G_{i,j,t}$` is the displacement of point `$(i,j)$` at time `$t$` and `$C$` is a constant `$\le 1$`.
