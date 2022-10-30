@@ -41,6 +41,11 @@ font-family: 'JetBrains Mono', monospace;
     color: black;
 }
 
+.MathJax_Display {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
 div#stuffBox > a {
     color: midnightblue;
     text-decoration: none;
@@ -102,13 +107,11 @@ div.topBar {
     justify-content: left;
 
     width: 100vw;
+    max-width: 95vw;
 }
 
 h1.title {
-    margin-left: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 0px;
+    margin: 20px 0px;
 
     padding: 0;
 
@@ -122,22 +125,18 @@ h1.title {
 }
 
 h1.desc {
-    margin-left: 0px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-
+    margin: 20px 20px 20px 0px;
     padding: 0;
-
-    width: 100%;
     color: darkgray;
 
+    width: 65%;
     text-align: right;
 
     font-family: "JetBrains Mono";
     font-size: 16px;
 
     overflow: clip;
+    text-align: right;
 }
 
 a.page:hover {
@@ -156,10 +155,7 @@ div.pageContent {
 
     align-self: center;
 
-    margin-top: 0;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 20px;
 
     height: auto;
     width: 95%;
@@ -180,10 +176,7 @@ div.postContent {
 
     align-self: center;
 
-    margin-top: 0;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 20px;
 
     height: auto;
     width: 95%;
@@ -287,4 +280,8 @@ iframe {
 
     width: 100%;
     aspect-ratio: 2;
+}
+
+p {
+    margin: 10px;
 }
