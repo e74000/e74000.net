@@ -1,4 +1,4 @@
 +++
-title="posts:"
+title="Posts:"
 description="[posts]"
 +++

@@ -6,7 +6,15 @@ font-family: 'JetBrains Mono', monospace;
 
 #content {
     width: 100vw;
-    background-color: yellowgreen;
+    background-color: #050505;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color: #050505;
+    width: 100vw;
+    height: max-content;
 }
 
 #container {
@@ -16,19 +24,50 @@ font-family: 'JetBrains Mono', monospace;
     align-items: center;
     height: 100vh;
     width: 100vw;
+    background-color: #050505;
 }
 
 #titleBox {
+    animation: loadAnimation ease-in-out 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    content: '';
+    z-index: 5;
     padding: 10px;
     margin: 5px;
     text-align: center;
-    background-color: black;
-    color: white;
+    background: yellow;
+    color: black;
+    border: 2px solid black;
 
-    box-shadow: -10px -10px #e74000;
+    position: relative;
+
+    box-shadow: 5px -5px 0px -2px orange, 5px -5px 0 0px black,
+        10px -10px 0px -2px orangered, 10px -10px 0 0px black,
+        15px -15px 0px -2px red, 15px -15px 0 0px black;
+
     text-decoration: none;
 
-    font-family: "IBM Plex Serif";
+    font-family: "JetBrains Mono";
+}
+
+@keyframes loadAnimation {
+    0% {
+        box-shadow: 0px 0px 0px -2px orange, 0px 0px 0 0px black,
+        0px -0px 0px -2px orangered, 0px -0px 0 0px black,
+        0px -0px 0px -2px red, 0px -0px 0 0px black;
+    }
+
+    100 % {
+        box-shadow: 5px -5px 0px -2px orange, 5px -5px 0 0px black,
+        10px -10px 0px -2px orangered, 10px -10px 0 0px black,
+        15px -15px 0px -2px red, 15px -15px 0 0px black;
+    }
+}
+
+#titleBox>h1 {
+    font-size: 60px;
 }
 
 #stuffBox {
@@ -42,19 +81,19 @@ font-family: 'JetBrains Mono', monospace;
 }
 
 .MathJax_Display {
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 
 div#stuffBox > a {
-    color: midnightblue;
+    color: yellow;
     text-decoration: none;
     margin-right: 10px;
     margin-left: 10px;
 }
 
 div#stuffBox > a:hover {
-    color: blue;
+    color: orange;
     text-decoration: underline;
 }
 
@@ -64,17 +103,17 @@ div#stuffBox > a:active {
 }
 
 a {
-    color: midnightblue;
-    text-decoration: none;
+    color: yellow;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: blue;
+    color: orange;
     text-decoration: underline;
 }
 
 a:active {
-    color: #e74000;
+    color: orangered;
     text-decoration: underline;
 }
 
@@ -82,41 +121,45 @@ a.logo {
     display: flex;
     width: min-content;
 
-    margin: 20px;
-    padding: 10px;
-    text-align: center;
-    background-color: black;
-    color: white;
+    padding: 0px 0px 0px 0px;
 
-    box-shadow: -10px -10px #e74000;
+    text-align: center;
     text-decoration: none;
 
-    font-family: "IBM Plex Serif";
+    color: yellow;
 }
 
 a.logo > h1 {
-    font-family: "IBM Plex Serif";
+    font-family: "JetBrains Mono";
     text-decoration: none;
-    color: white;
-    font-size: 27px;
+    font-size: 24px;
+    padding: 10px;
+    margin: 0 0px ;
+    color: #050505;
+    background-color: yellow;
 }
 
 div.topBar {
+    position: fixed;
+    background-color: #050505;
     display: flex;
     align-items: center;
     justify-content: left;
 
     width: 100vw;
-    max-width: 95vw;
+    max-width: 100vw;
+
+    border: solid yellow;
+    border-width: 0 0 2px 0;
+    z-index: 10;
 }
 
 h1.title {
-    margin: 20px 0px;
+    margin: 10px 20px;
 
     padding: 0;
 
-    width: available;
-    color: black;
+    color: white;
 
     font-size: 18px;
 
@@ -139,17 +182,21 @@ h1.desc {
     text-align: right;
 }
 
+a.page {
+    text-decoration: none;
+}
+
 a.page:hover {
     text-decoration-color: #e74000;
 }
 
 div.pageContent {
-    color: black;
+    color: white;
     text-decoration: none;
 
     padding: 0px;
-    background-color: lightgray;
-    border-radius: 10px;
+    background-color: #050505;
+    border-radius: 0px;
 
     font-family: "IBM Plex Sans";
 
@@ -158,19 +205,18 @@ div.pageContent {
     margin: 0 auto 20px;
 
     height: auto;
-    width: 95%;
+    width: 64%;
 
     display: table;
 }
 
 div.postContent {
-    color: black;
+    color: white;
     text-decoration: none;
-    transition: transform .2s;
 
     padding: 0px;
-    background-color: lightgray;
-    border-radius: 10px;
+    background-color: black;
+    border: 2px solid white;
 
     font-family: "IBM Plex Sans";
 
@@ -182,10 +228,6 @@ div.postContent {
     width: 95%;
 
     display: table;
-}
-
-div.postContent:hover {
-    transform: scale(1.01);
 }
 
 .postContent > span {
@@ -197,6 +239,18 @@ span.titleDesc {
     padding: 10px;
 }
 
+.titleDesc>h1 {
+    margin: 0;
+    padding: 10px 0 10px 10px;
+}
+
+.titleDesc>h4 {
+    margin: 0;
+    padding: 0 0 10px 10px;
+    color: darkgray;
+    font-family: "JetBrains Mono";
+}
+
 span.image {
     width: 20%;
     height: 100%;
@@ -204,7 +258,9 @@ span.image {
     background-repeat: no-repeat;
     background-position: center;
 
-    border-radius: 0px 10px 10px 0px;
+    border: solid white;
+    border-width: 0px 0px 0px 2px;
+
     overflow: hidden;
 }
 
@@ -215,12 +271,14 @@ html, body {
 
     height: 100vh;
     width: 100vw;
+
+    background-color: #050505;
 }
 
 pre {
     margin: 10px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 code.has-jax {
@@ -232,27 +290,24 @@ code.has-jax {
 }
 
 div.program {
-    width: 100%;
-    padding: 0;
-
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
     overflow: hidden;
 
-    background-color: #272822;
+    background-color: #050505;
     color: lightgray;
 
-    padding-bottom: 5px;
+    padding: 0;
 
     display: flex;
 
     flex-flow: wrap;
+
+    border: 2px solid white;
 }
 
 #options {
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 2.5px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 3px;
     width: 100%;
     font-family: "JetBrains Mono";
     display: block;
@@ -262,14 +317,17 @@ div.program {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    border: solid white;
+    border-width: 2px 0 0 0;
+    padding: 10px;
 }
 
 .optionSlider {
-    width: 100%;
+
 }
 
 .optionNumber {
-    width: 10%;
+
 }
 
 iframe {
@@ -280,8 +338,31 @@ iframe {
 
     width: 100%;
     aspect-ratio: 2;
+
+    pointer-events: none;
 }
 
 p {
-    margin: 10px;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+.pageContent>h2 {
+    margin-left: 30px;
+    margin-bottom: 0px;
+    color: yellow;
+    font-family: "JetBrains Mono";
+}
+
+div.inputBox {
+    float: right;
+    margin-right: 20px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    image-rendering: crisp-edges;
 }

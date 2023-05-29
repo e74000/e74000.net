@@ -7,8 +7,11 @@
                     <h1>e74000</h1>
                 </a>
 
-                <h1 class = "title"> {{ .Title }} </h1><h1 class="desc"> {{ .Description }} </h1>
+                <h1 class = "title"> {{ .Title }} </h1>
             </div>
+
+            <!-- Its Chilly here -->
+            <br><br><br><br>
         </header>
         <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
         {{.Content}}
@@ -27,5 +30,6 @@
 
         </a>
     {{ end }}
+    <br>
 </main>
 {{ end }}
