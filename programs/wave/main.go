@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/charmbracelet/log"
 	"github.com/e74000/wshim"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/mazznoer/colorgrad"
@@ -174,6 +175,8 @@ func (g *Game) getNeighborValues(x, y int) (float64, float64, float64, float64) 
 func main() {
 	px = rand.Int() % XScale
 	py = rand.Int() % YScale
+
+	wshim.SetLogLevel(log.DebugLevel)
 
 	wshim.Run(_main)
 }
