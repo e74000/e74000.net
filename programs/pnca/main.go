@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/charmbracelet/log"
 	"github.com/e74000/wshim"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/mazznoer/colorgrad"
@@ -139,15 +140,17 @@ func main() {
 	damp = 2.01
 	sigma = 1
 
+	wshim.SetLogLevel(log.DebugLevel)
+
 	wshim.Run(
-		mainFunc,
+		_main,
 		wshim.FloatSlider("Temperature", 0, 0.01, 0.0001, &temp),
 		wshim.FloatSlider("Damping", 1, 10, 0.001, &damp),
-		wshim.FloatSlider("$\\sigma$", 0, 2, 0.001, &sigma),
+		wshim.FloatSlider("Sigma", 0, 2, 0.001, &sigma),
 	)
 }
 
-func mainFunc() {
+func _main() {
 	g := new(Game)
 	g.Init(128, 64)
 

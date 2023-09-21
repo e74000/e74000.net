@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/charmbracelet/log"
 	"github.com/e74000/wshim"
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/lucasb-eyer/go-colorful"
@@ -9,8 +10,8 @@ import (
 )
 
 const (
-	XScale = 200
-	YScale = 100
+	XScale = 128
+	YScale = 64
 )
 
 var (
@@ -95,6 +96,8 @@ func (g *Game) Draw(screen *ebiten.Image) {
 }
 
 func main() {
+	wshim.SetLogLevel(log.DebugLevel)
+
 	wshim.Run(_main,
 		wshim.FloatSlider("Temperature", 0, 2, 0.001, &temperature),
 		wshim.FloatSlider("Interaction Strength", -1, 1, 0.001, &interaction),

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/charmbracelet/log"
 	"github.com/e74000/wshim"
 	"github.com/hajimehoshi/ebiten/v2"
 	"math"
@@ -85,6 +86,8 @@ func FW(a, b int) int {
 }
 
 func main() {
+	wshim.SetLogLevel(log.DebugLevel)
+
 	// Initialise program with one slider
 	wshim.Run(_main, wshim.FloatSlider(
 		"Temperature", 0.001, 10, 0.001, &temperature,

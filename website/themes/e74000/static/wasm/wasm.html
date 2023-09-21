@@ -1,35 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>e74000/wasm</title>
-</head>
-<body style="background: #272822">
-    <script src="/js/wasm_exec.js"></script>
-    <script>
-        window.addEventListener('DOMContentLoaded',
-        async () => {
-            const go = new Go()
-            const name = window.location.search.substring(1);
-            let url = `/wasm/${name}`
+<script src="/js/wasm_exec.js"></script>
+<script>
+    if (!WebAssembly.instantiateStreaming) {
+        WebAssembly.instantiateStreaming = async (resp, importObject) => {
+            const source = await (await resp).arrayBuffer();
+            return await WebAssembly.instantiate(source, importObject);
+        };
+    }
 
-            if (location.hostname === 'localhost') {
-                const params = new URLSearchParams(window.parent.location.search);
-                if (params.has('wasmurl')) {
-                    url = params.get('wasmurl');
-                }
-            }
+    const name = window.location.search.substring(1);
+    let url = `/wasm/${name}`
 
-            if (!WebAssembly.instantiateStreaming) {
-                WebAssembly.instantiateStreaming = async (resp, importObject) => {
-                    const source = await (await resp).arrayBuffer();
-                    return await WebAssembly.instantiate(source, importObject);
-                };
-            }
+    if (location.hostname === 'localhost') {
+        const params = new URLSearchParams(window.parent.location.search);
+        if (params.has('wasmurl')) {
+            url = params.get('wasmurl');
+        }
+    }
 
-            WebAssembly.instantiateStreaming(fetch(url), go.importObject).then(result => {
-                go.run(result.instance);
-            });
-        })
-    </script>
-</body>
-</html>
+    const go = new Go();
+    WebAssembly.instantiateStreaming(fetch(url), go.importObject).then(result => {
+        go.run(result.instance);
+    });
+</script>
