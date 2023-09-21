@@ -276,9 +276,12 @@ html, body {
 }
 
 pre {
-    margin: 10px;
+    margin: 10px 0px 0px;
     padding: 10px;
     border-radius: 0px;
+    border: 2px solid white;
+    background-color: #050505 !important;
+    font-family: "JetBrains Mono" !important;
 }
 
 code.has-jax {
@@ -307,7 +310,7 @@ div.program {
 #options {
     margin-right: 0;
     margin-left: 0;
-    margin-top: 3px;
+    margin-top: 0;
     width: 100%;
     font-family: "JetBrains Mono";
     display: block;
@@ -343,15 +346,19 @@ iframe {
 }
 
 p {
-    margin: 5px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-left: 5px;
 }
 
 .pageContent>h2 {
-    margin-left: 30px;
+    margin-left: 0px;
     margin-bottom: 0px;
     color: yellow;
     font-family: "JetBrains Mono";
+}
+
+.pageContent>h2:before {
+    content: '> '
 }
 
 div.inputBox {
@@ -365,4 +372,16 @@ img {
     margin-right: auto;
     width: 50%;
     image-rendering: crisp-edges;
+}
+
+blockquote {
+    border-left: 2px solid yellow;
+    padding: 10px 10px 10px;
+    margin: 10px 0px 0px;
+    background: #313100;
+    font-family: "JetBrains Mono";
+}
+
+blockquote>p {
+    margin: 0px;
 }
