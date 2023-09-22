@@ -337,8 +337,7 @@ iframe {
 
     width: 100%;
     aspect-ratio: 2;
-
-    pointer-events: none;
+    pointer-events: all;
 }
 
 p {
