@@ -494,7 +494,7 @@ func (g *Game) gameUpdate() error {
 
 // mainMenuUpdate is called every physics update whenever the main menu is being displayed
 func (g *Game) mainMenuUpdate() error {
-	if inpututil.IsKeyJustPressed(ebiten.KeyEnter) {
+	if inpututil.IsKeyJustPressed(ebiten.KeySpace) {
 		log.Debug("leaving main menu")
 		g.startGame()
 	}
@@ -506,7 +506,7 @@ func (g *Game) mainMenuUpdate() error {
 
 // gameOverUpdate is called every physics update whenever the game over screen is being displayed
 func (g *Game) gameOverUpdate() error {
-	if inpututil.IsKeyJustPressed(ebiten.KeyEnter) {
+	if inpututil.IsKeyJustPressed(ebiten.KeySpace) {
 		log.Debug("moving to main menu")
 		g.gameOver = false
 		g.mainMenu = true

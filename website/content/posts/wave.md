@@ -3,7 +3,7 @@ title: "Wave Simulation"
 description: "[physics] [CA]"
 date: "1970-01-03"
 program: true
-programName: "wave.wasm"
+programName: "wave"
 thumbnail: "wave.png"
 ---
 

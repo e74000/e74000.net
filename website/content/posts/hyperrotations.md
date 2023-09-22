@@ -3,7 +3,7 @@ title: "Hyper-Rotations"
 description: "[maths] [visualisation]"
 date: "1970-01-04"
 program: true
-programName: "cube.wasm"
+programName: "cube"
 thumbnail: "cube.png"
 ---
 

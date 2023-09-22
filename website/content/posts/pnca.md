@@ -3,7 +3,7 @@ title: "Probabilistic Neural Cellular Automata"
 description: "[CA]"
 date: "1970-01-06"
 program: true
-programName: "pnca.wasm"
+programName: "pnca"
 thumbnail: "pnca.png"
 ---
 
