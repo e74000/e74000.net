@@ -3,7 +3,7 @@ title: "Relativistic Asteroids Clone"
 description: "[physics] [game] [visualisation]"
 date: "1970-01-07"
 program: true
-programName: "asteroids"
+programName: "asteroids.wasm"
 thumbnail: "asteroids.png"
 ---
 

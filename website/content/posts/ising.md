@@ -3,7 +3,7 @@ title: "The Ising Model"
 description: "[physics] [CA]"
 date: "1970-01-01"
 program: true
-programName: "ising"
+programName: "ising.wasm"
 thumbnail: "ising.png"
 ---
 

@@ -3,7 +3,7 @@ title: "The Classical XY Model"
 description: "[physics] [CA]"
 date: "1970-01-02"
 program: true
-programName: "xy"
+programName: "xy.wasm"
 thumbnail: "xy.png"
 ---
 
