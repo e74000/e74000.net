@@ -1,14 +1,9 @@
 <div class="program">
-    <iframe allow="autoplay" scrolling="no" id="program-iframe" src="{{ printf "%s%s%s" ("wasm/wasm.html" | absURL) "?" .Params.ProgramName }}"></iframe><br>
+<!--    <iframe allow="autoplay" scrolling="no" id="program-iframe" src="{{ printf "%s%s%s" ("wasm/wasm.html" | absURL) "?" .Params.ProgramName }}"></iframe><br>-->
 
-    <script>
-        function focus() {
-            let iframe = document.getElementById('program-iframe')
-            iframe.contentWindow.focus();
-        }
+    <br>
 
-        window.setInterval(focus, 100);
-    </script>
+    <iframe src="/wasm/main.html" width="640" height="480"></iframe>
 
     <div id="options"></div>
 </div>
